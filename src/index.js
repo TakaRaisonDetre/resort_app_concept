@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {BrowserRouter as Router} from 'react-router-dom'
+import {RoomProvider} from './context'
+
 ReactDOM.render(
+  <RoomProvider>
+  <Router>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </Router>
+  </RoomProvider>,
   document.getElementById('root')
 );
 
@@ -15,3 +22,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+//Coding Addict - https://www.youtube.com/watch?v=ScDWrogElmo 
